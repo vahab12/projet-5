@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Orinophotos</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/7d24abc9b5.js" crossorigin="anonymous"></script>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img class="logo_img" src="../images/logo-orinoco.png" alt="logoorinoco" /></a>
+        </div>
+        <nav class="main_nav">
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active"></a>
+                <a href="../index.html">ACCUEIL</a>
+                <a href="./contact.html">CONTACT</a>
+                <a href="./aprpos.html">A PROPOS</a>
+                <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="panier">
+                <a href="./panier.html" id="qantityPanier"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="slider">
+        <h2>Voici la page pour <br> nous contacter ! </h2>
+    </div>
+    <main>
+
+
+        <form action="#" method="POST" id="form">
+            <div class="contact_title">
+                <h2>Veuillez nous contactez, nous vous repondons dans le meillieur délais</h2>
+            </div>
+            <div class="mr_mme">
+                <input type="radio" id="Mr" name="drone" value="Mr" checked>
+                <label for="Mr">Mr</label>
+
+                <input type="radio" id="Mme" name="drone" value="Mme">
+                <label for="Mme">Mme</label>
+            </div>
+            <div class="firstname_lastname">
+                <div class="firstname form">
+                    <label for="nom">Nom*</label>
+                    <input type="text" id="nom" name="nom" required="required" placeholder="Nom" />
+                </div>
+                <div class="lastname form">
+                    <label for="prenom">Prénom*</label>
+                    <input type="text" id="prenom" name="prenom" required="required" placeholder="Prénom" />
+                </div>
+            </div>
+            <div class="adresse form">
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse" />
+            </div>
+            <div class="cpostale_ville">
+                <div class="zipcode form">
+                    <label for="zipcode">Code postale </label>
+                    <input type="text" id="zipcode" name="text" />
+                </div>
+                <div class="ville form">
+                    <label for="ville">Ville *:</label>
+                    <input type="text" id="ville" name="text" />
+                </div>
+            </div>
+            <div class="mail form">
+                <label for="email">E-mail *:</label>
+                <input type="email" id="email" name="email" required="required" placeholder="votre mail" />
+            </div>
+            <div class="message form">
+                <label for="msg">Message*</label>
+                <textarea id="msg" name="user_message" required="required" placeholder="votre message"></textarea>
+            </div>
+            <div class="button">
+                <input type="submit" value="Envoyer" id="envoiFormulaire" />
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <h1> <a href="">ORINOCO</a> </h1>
+            </div>
+            <ul class="social-media">
+                <li>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-instagram"></i></a> </li>
+                <li> <a href=""><i class="fab fa-twitter"></i></a> </li>
+            </ul>
+        </div>
+        <span>©2021/vahab-zare.com</span>
+    </footer>
+    <script src="../js/camera.js"></script>
+</body>
+
+</html>

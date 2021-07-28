@@ -1,0 +1,857 @@
+    /*css commun*/
+    
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    
+    blockquote,
+    q {
+        quotes: none;
+    }
+    
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
+    h1,
+    h2,
+    h3,
+    a,
+    .name,
+    .button,
+    #button {
+        font-family: 'Finger Paint', cursive;
+    }
+    
+    p,
+    li,
+    label {
+        font-family: robo;
+        font-size: 1.3rem;
+    }
+    
+    .boutton,
+    .appareil-description {
+        margin-bottom: 1rem;
+    }
+    
+    .confirmation:active {
+        color: black;
+    }
+    
+    .zoom {
+        width: 320px;
+        height: 240px;
+    }
+    /*###########################
+######### Header ########
+##########################*/
+    
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 50px 10px;
+    }
+    
+    .logo {
+        width: 200px;
+    }
+    
+    .logo_img {
+        width: 100%;
+    }
+    /*NAV*/
+    
+    .main_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .main_nav .panier {
+        color: black;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    /* Add a black background color to the top navigation */
+    
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 50%;
+        background-color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+    /* Style the links inside the navigation bar */
+    
+    .topnav a {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        color: #000000;
+        text-decoration: none;
+        font-size: 17px;
+        font-size: 1.3rem;
+    }
+    /* Change the color of links on hover */
+    
+    .topnav a:hover {
+        background-color: #FC5C7D;
+        border-radius: 10px;
+        color: black;
+    }
+    /* Add an active class to highlight the current page */
+    
+    .topnav a.active {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+    /* Hide the link that should open and close the topnav on small screens */
+    
+    .topnav .icon,
+    .topnav .active {
+        display: none;
+    }
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    
+    @media screen and (max-width: 1024px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav a:hover {
+            background-color: #ffffff;
+            color: black;
+        }
+        .topnav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    
+    @media screen and (max-width: 1024px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: center;
+        }
+    }
+    /*###########################
+######### SLIDER ########
+##########################*/
+    
+    @media screen and (min-width: 10px) {
+        .slider {
+            background: #FC5C7D;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6A82FB, #FC5C7D);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        .slider h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            letter-spacing: 2px;
+            line-height: 50px;
+        }
+    }
+    /*###################################
+######### La page d'acceuil #########
+#####################################*/
+    
+    #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 50px 0;
+        width: 100%;
+    }
+    
+    article {
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-bottom: 5rem;
+        box-shadow: 1px 1px 1px 2px rgb(141, 141, 141);
+        border-radius: 20px;
+    }
+    
+    .card_img {
+        width: 400px;
+        height: 300px;
+    }
+    
+    .card_img img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+    }
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        margin-bottom: 0.5rem;
+        padding: 10px;
+    }
+    /* Titrre*/
+    
+    .description h2,
+    .nom_produit h2,
+    .name div {
+        color: #1e3894;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    /*price*/
+    
+    .description p,
+    .prix_produit .prix {
+        color: #FC5C7D;
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding: 10px 0 20px;
+    }
+    /* button*/
+    
+    article a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FC5C7D;
+        border: 1px solid white;
+        border-radius: 20px;
+        text-decoration: none;
+        width: 200px;
+        height: 40px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+    
+    article a:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(21, 92, 15);
+    }
+    
+    .appareil-description,
+    .nom {
+        margin-top: 0.5rem;
+    }
+    
+    #panier:active {
+        background-color: grey;
+        color: black;
+        font-weight: bold;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        #container {
+            padding: 50px 20px 0;
+        }
+        article {
+            width: 47%;
+        }
+        .card_img {
+            width: 100%;
+        }
+        .card_img img {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 667px) {
+        #container {
+            padding: 25px 2px;
+        }
+        article {
+            margin: 20px;
+            width: 100%;
+        }
+        .card_img {
+            width: 100%;
+        }
+        .card_img img {
+            width: 100%;
+        }
+    }
+    /*################################
+   ######### La page produit #########
+##################################*/
+    
+    .page_produit {
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+    }
+    
+    .img_produit {
+        width: 50%;
+    }
+    
+    .img_produit img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 1px 1px 1px 1px rgb(206, 206, 206);
+    }
+    
+    .description_produit {
+        width: 40%;
+        padding: 20px 0 0 30px;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 1px 1px 1px rgb(192, 192, 192);
+        border: 1px solid rgb(199, 199, 199);
+    }
+    
+    .nom_produit,
+    .prix_produit,
+    .texte_produit,
+    .options_produit,
+    .quantite,
+    .button {
+        padding: 5px 0;
+    }
+    
+    .options_produit {
+        padding-bottom: 5px;
+    }
+    
+    .quantite p {
+        padding: 10px 0 5px;
+        font-size: 1.2rem;
+    }
+    
+    .quantite .q_produit {
+        width: 125px;
+        height: 30px;
+    }
+    
+    .texte_produit {
+        padding-bottom: 10px;
+    }
+    
+    .button {
+        padding: 50px 10px 0 0;
+    }
+    
+    .button button,
+    .button input {
+        background-color: #FC5C7D;
+        border: 1px solid white;
+        border-radius: 20px;
+        text-decoration: none;
+        width: 100%;
+        height: 40px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+    
+    .button button:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(21, 92, 15);
+    }
+    
+    @media (max-width: 1024px) {
+        .page_produit {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+        .img_produit {
+            width: 50%;
+            height: auto;
+        }
+        .img_produit img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    @media (max-width: 676px) {
+        .page_produit {
+            display: flex;
+            flex-direction: column;
+        }
+        .img_produit {
+            width: 100%;
+        }
+        .img_produit img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .description_produit {
+            width: 100%;
+            padding: 0;
+            border-radius: 0 0 10px 10px;
+            border: 1px solid transparent;
+        }
+        .button {
+            padding: 0;
+        }
+    }
+    /*################################
+   ######### La page panier #########
+##################################*/
+    
+    .recap-commande {
+        padding: 30px;
+    }
+    /* Nom d'élement dans le pannier*/
+    
+    .element_panier {
+        margin: 20px;
+        border-radius: 10px;
+    }
+    
+    .element_panier h3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #FC5C7D;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    
+    .element_panier,
+    .name,
+    .quantity,
+    .price,
+    .delete {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px 0 0;
+    }
+    /* Element dans le pannier*/
+    
+    .element_panier {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid rgb(44, 44, 44);
+        box-shadow: 1px 1px 1px rgb(122, 122, 122);
+    }
+    
+    .image_panier {
+        width: 170px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    .image_panier img {
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+    
+    .element_panier div {
+        display: flex;
+        font-size: 1.3rem;
+    }
+    /* Prix totale de panier*/
+    
+    .total_ttc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #000000;
+        border: 1px solid rgb(73, 73, 73);
+    }
+    
+    .total_ttc p {
+        font-size: 1.6rem;
+    }
+    
+    .total_ttc div {
+        padding: 20px;
+    }
+    
+    .total {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+    /*Fomulaire ou form */
+    
+    form {
+        padding: 0 350px 50px;
+    }
+    
+    input {
+        height: 35px;
+    }
+    
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .mr_mme {
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #FC5C7D;
+        padding: 20px 0 10px;
+    }
+    
+    form .firstname_lastname,
+    .cpostale_ville,
+    .date_code {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .firstname,
+    .adresse,
+    .zipcode,
+    .mail,
+    .date {
+        padding: 0 10px 0 0;
+    }
+    
+    @media (max-width: 1024px) {
+        .recap-commande {
+            padding: 10px;
+        }
+        #cart {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .element_panier {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 25%;
+        }
+        .element_panier h3 {
+            padding-bottom: 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .name,
+        .quantity,
+        .price,
+        .delete {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 20px 0;
+        }
+        .image_panier {
+            width: 100%;
+        }
+        form {
+            padding: 0 50px 20px;
+        }
+    }
+    
+    @media (max-width: 676px) {
+        .recap-commande {
+            padding: 2px;
+        }
+        #cart {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .element_panier {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 40%;
+        }
+        .image_panier {
+            width: 100%;
+        }
+        form {
+            padding: 0 10px 20px;
+        }
+    }
+    
+    @media (max-width: 530px) {
+        .element_panier {
+            width: 100%;
+        }
+        .image_panier {
+            width: 100%;
+        }
+    }
+    /*########################################
+######### La page confirmation ###########
+#######################################*/
+    
+    .confirmation {
+        padding: 50px;
+    }
+    /*###########################
+######### La page contact ########
+##########################*/
+    
+    #msg {
+        height: 250px;
+    }
+    
+    .contact_title {
+        padding-top: 50px;
+    }
+    /*###########################
+######### La page a propos ########
+##########################*/
+    
+    .apropos {
+        padding: 50px;
+    }
+    
+    .apropos {
+        padding: 50px;
+    }
+    
+    .apropos h2 {
+        padding-top: 30px;
+    }
+    
+    .apropos {
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        line-height: 30px;
+    }
+    /*###########################
+######### Footer ########
+##########################*/
+    
+    footer {
+        background: #1e3894;
+    }
+    
+    .footer {
+        padding-top: 30px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .footer .logo h1 a,
+    .social-media a {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .social-media a {
+        font-size: 2rem;
+    }
+    
+    footer span {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    @media (max-width: 1024px) {
+        .footer ul {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+    @media (max-width: 667px) {
+        .footer {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+        .footer ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .footer .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    
+    ul {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+    }

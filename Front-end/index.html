@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>ORINOCO</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/7d24abc9b5.js" crossorigin="anonymous"></script>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img class="logo_img" src="./images/logo-orinoco.png" alt="logoorinoco" /></a>
+        </div>
+        <nav class="main_nav">
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active"></a>
+                <a href="./index.html">ACCUEIL</a>
+                <a href="./pages/contact.html">CONTACT</a>
+                <a href="./pages/aprpos.html">A PROPOS</a>
+                <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="panier">
+                <a href="./pages/panier.html" id="qantityPanier"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="slider">
+        <h2>Voici les caméras vintages qui <br> vous cherchez ! </h2>
+    </div>
+
+    <main>
+        <div id="container">
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <h1> <a href="">ORINOCO</a> </h1>
+            </div>
+            <ul class="social-media">
+                <li>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                </li>
+                <li> <a href=""><i class="fab fa-instagram"></i></a> </li>
+                <li> <a href=""><i class="fab fa-twitter"></i></a> </li>
+            </ul>
+        </div>
+        <span>©2021/vahab-zare.com</span>
+    </footer>
+
+    <script src="./index.js"></script>
+    <script src="./js/camera.js"></script>
+</body>
+
+</html>
